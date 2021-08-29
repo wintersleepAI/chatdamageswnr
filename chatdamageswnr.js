@@ -12,7 +12,20 @@ class ChatDamageButtonsSWNR extends Application {
             
             let len = message.roll.dice.length;      
             // If there are 2 rolls, use the second. else take first      
-            let total = (len == 2) ? message.roll.dice[1].total : message.roll.dice[0].total;
+            let total = 0;
+            if (len == 0) {
+                // Shock Damage with no roll
+                total = message.roll.total;
+            } else if (len == 1) {
+                total = message.roll.dice[0].total;
+            } else if (len == 2) {
+                total = message.roll.dice[1].total;
+            } else {
+                console.log("Unknown roll. Not trying to set damage button", message);
+                return;
+            }
+            if (total == 0)  return;
+
             let btnStyling = 'width: 22px; height:22px; font-size:10px;line-height:1px';
 
             const fullDamageButton = $(`<button class="dice-total-fullDamage-btn" style="${btnStyling}"><i class="fas fa-user-minus" title="Click to apply full damage to selected token(s)."></i></button>`);
@@ -58,7 +71,6 @@ class ChatDamageButtonsSWNR extends Application {
 }
 
 async function applyHealthDrop(total) {
-    
     let actors = canvas.tokens.controlled.map(token => {return token.actor});
     if(actors.length == 0){
       ui.notifications.error("Please select at least one token")
