@@ -2,13 +2,13 @@
 	"name": "chatdamageswnr",
 	"title": "Chat Damage Buttons SWNR",
 	"description": "This module will add damage buttons on damage roll chat cards to easily apply damage to tokens",
-	"version": "0.1",
+	"version": "0.2",
 	"minimumCoreVersion": "0.8.8",
     "compatibleCoreVersion": "0.8.8",
 
 	"author": "WinterSleepAI (og code: hooking)",
 	"scripts": ["./chatdamageswnr.js"],
 	"url": "https://github.com/wintersleepAI/chatdamageswnr",
-	"manifest": "https://github.com/wintersleepAI/chatdamageswnr/releases/download/v0.1/module.json",
-	"download": "https://github.com/wintersleepAI/chatdamageswnr/releases/download/v0.1/chatdamageswnr-0.1.zip"
+	"manifest": "https://github.com/wintersleepAI/chatdamageswnr/releases/download/v0.2/module.json",
+	"download": "https://github.com/wintersleepAI/chatdamageswnr/releases/download/v0.2/chatdamageswnr-0.2.zip"
 }
