@@ -1,3 +1,7 @@
+# Deprecated
+
+This module is no longer developed (or needed) as the core functionality has been migrated into the core SWN system.
+
 # chatdamageswnr
 Simple Module for Foundry SWNR for applying chat damage to actors
 
